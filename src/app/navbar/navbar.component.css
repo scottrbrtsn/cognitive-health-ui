@@ -1,0 +1,141 @@
+/* Fixed sidenav, full height */
+#vertical-menu {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding: 10px 0px 6px 16px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+#cssnav {
+position:absolute;
+padding: 50px 0px 0px 0px;
+color: #111; /* Template Designer - Change Font Size */
+text-align:left;
+}
+
+#cssnav ul {
+border-style: none;
+background: #111;
+height: 40px; /* Change Height of Menu */
+list-style: none;
+padding: 0px;
+}
+
+#cssnav li {
+border-style: none;
+font-family: "Lato", sans-serif;
+list-style: none;
+float: left;
+padding: 15px;
+width: 225px;
+}
+
+#cssnav li a {
+background: #111;
+color:#818181;
+display: block;
+margin-left: -10px;
+font-size: 24px;
+text-decoration: none;
+text-align:left;
+}
+
+#cssnav > ul > li > a {
+text-align:left;
+color: #818181; /* Template Designer - Change Font Color */
+}
+
+#cssnav ul ul a {
+color: #111; /* Template Designer - Change Color */
+}
+
+#cssnav li > a:hover, #cssnav ul li:hover {
+color: #f4d442; /* Hover over main navbar text - yellow*/
+text-align:left;
+background-color: #111; /* Template Designer - Change Font Background on Hover */
+text-decoration: none;
+font-family: "Lato", sans-serif;
+transition: .2s ease .05s;
+}
+
+/*DropDown Menu */
+#cssnav li ul {
+background: #111;
+display: none;
+height: auto;
+margin-left: 5px;
+width: 200px; /* Change Width Of DropDown Menu */
+z-index:9;
+font-family: "Lato", sans-serif;
+font-size:22px;
+}
+
+#cssnav li:hover ul {
+display: block;
+font-family: "Lato", sans-serif;
+font-size:20px;
+transition: .4s ease .15s;
+}
+
+#cssnav li li {
+background: #111;
+color: white;
+display: block;
+float: none;
+margin-left: -10px;
+width: 175px; /* Change Width Of DropDown Menu */
+padding: 5px;
+font-family: "Lato", sans-serif;
+font-size:20px;
+}
+
+#cssnav li:hover li a {
+color: #818181;
+background: #262626; /* Template Designer - Change Background of Link on Hover */
+font-family: "Lato", sans-serif;
+display: block;
+height: auto;
+text-align: left;
+font-size:20px;
+transition: .4s ease .15s;
+}
+
+#cssnav li ul a {
+display: block;
+height: auto;
+margin-left: -10px;
+padding: 10px;
+text-align: left;
+font-size:20px;
+color: white;
+font-family: "Lato", sans-serif;
+}
+
+/* dropdown style */
+#cssnav li ul a:hover, #cssnav li ul li:hover > a {
+color: white; 
+background-color: #818181; 
+border: none;
+text-decoration: none;
+font-family: "Lato", sans-serif;
+display: block;
+height: auto;
+margin-left: -10px;
+text-align: left;
+font-size:20px;
+transition: .4s ease .15s;
+}
+
+@media screen and (max-height: 450px) {
+    #vertical-menu {padding-top: 15px;}
+    #vertical-menu a {font-size: 18px;}
+}

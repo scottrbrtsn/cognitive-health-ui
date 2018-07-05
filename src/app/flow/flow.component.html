@@ -1,0 +1,279 @@
+<div id="flow" ng-controller = "myController as myCtrl">
+    <form (ngSubmit)="saveSurvey()" name="flowForm">
+
+<h1> FLOW SURVEY</h1>
+
+    <select [(ngModel)]="formData.userName" name="name">
+        <option value="">--- NAME ---</option>
+
+    </select>
+
+        <div class = "container">
+            <p class = "questions">
+              I feel just the right amount of challenge.
+            </p>
+            
+                  <ul class="likert">
+                        <li class="likert"> Not At All <input id="radAgreeStart1" type="radio" name="Agree1" value="1" [(ngModel)]="formData.fss1" required />
+                        <li class="likert"><input type="radio" name="Agree1" value="2" [(ngModel)]="formData.fss1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="3" [(ngModel)]="formData.fss1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="4" [(ngModel)]="formData.fss1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="5" [(ngModel)]="formData.fss1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="6" [(ngModel)]="formData.fss1"/>
+                        <li class="likert"><input id="radAgreeEnd1" type="radio" name="Agree1" value="7" [(ngModel)]="formData.fss1"/> Very Much
+                  </ul>
+        </div>    
+
+
+        <div class = "lightContainer">
+            <p class = "questions">
+            My thoughts/activities run fluidly and smoothly.
+            </p>
+      
+            <ul class="likert">
+                  <li class="likert"> Not At All <input id="radAgreeStart2" type="radio" name="Agree2" value="1" [(ngModel)]="formData.fss2" required/>
+                  <li class="likert"><input type="radio" name="Agree2" value="2" [(ngModel)]="formData.fss2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="3" [(ngModel)]="formData.fss2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="4" [(ngModel)]="formData.fss2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="5" [(ngModel)]="formData.fss2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="6" [(ngModel)]="formData.fss2"/>
+                  <li class="likert"><input id="radAgreeEnd2" type="radio" name="Agree2" value="7" [(ngModel)]="formData.fss2"/> Very Much
+            </ul>
+      </div>
+
+   <div class = "container">
+    <p class = "questions"> 
+     I do not notice time passing.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart3" type="radio" name="Agree3" value="1" [(ngModel)]="formData.fss3" required/>
+                <li class="likert"><input type="radio" name="Agree3" value="2" [(ngModel)]="formData.fss3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="3" [(ngModel)]="formData.fss3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="4" [(ngModel)]="formData.fss3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="5" [(ngModel)]="formData.fss3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="6" [(ngModel)]="formData.fss3"/>
+                <li class="likert"><input id="radAgreeEnd3" type="radio" name="Agree3" value="7" [(ngModel)]="formData.fss3"/> Very Much
+            </ul>
+	</div>
+        
+       <div class = "lightContainer">
+    <p class = "questions"> 
+  I have no difficulty concentrating.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart4" type="radio" name="Agree4" value="1" [(ngModel)]="formData.fss4" required/>
+                <li class="likert"><input type="radio" name="Agree4" value="2" [(ngModel)]="formData.fss4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="3" [(ngModel)]="formData.fss4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="4" [(ngModel)]="formData.fss4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="5" [(ngModel)]="formData.fss4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="6" [(ngModel)]="formData.fss4"/>
+                <li class="likert"><input id="radAgreeEnd4" type="radio" name="Agree4" value="7" [(ngModel)]="formData.fss4"/> Very Much
+            </ul>
+     </div>
+
+       <div class = "container">
+    <p class = "questions"> 
+ My mind is completely clear.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart5" type="radio" name="Agree5" value="1" [(ngModel)]="formData.fss5" required/>
+                <li class="likert"><input type="radio" name="Agree5" value="2" [(ngModel)]="formData.fss5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="3" [(ngModel)]="formData.fss5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="4" [(ngModel)]="formData.fss5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="5" [(ngModel)]="formData.fss5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="6" [(ngModel)]="formData.fss5"/>
+                <li class="likert"><input id="radAgreeEnd5" type="radio" name="Agree5" value="7" [(ngModel)]="formData.fss5"/> Very Much
+            </ul>
+      </div>
+      
+       <div class = "lightContainer">
+    <p class = "questions"> 
+  I am totally absorbed in what I am doing.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart6" type="radio" name="Agree6" value="1" [(ngModel)]="formData.fss6" required/>
+                <li class="likert"><input type="radio" name="Agree6" value="2" [(ngModel)]="formData.fss6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="3" [(ngModel)]="formData.fss6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="4" [(ngModel)]="formData.fss6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="5" [(ngModel)]="formData.fss6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="6" [(ngModel)]="formData.fss6"/>
+                <li class="likert"><input id="radAgreeEnd6" type="radio" name="Agree6" value="7" [(ngModel)]="formData.fss6"/> Very Much
+            </ul>
+        </div>
+        
+        <div class = "container">
+    <p class = "questions"> 
+   The right thoughts/movements occur of their own accord.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart7" type="radio" name="Agree7" value="1" [(ngModel)]="formData.fss7" required/>
+                <li class="likert"><input type="radio" name="Agree7" value="2" [(ngModel)]="formData.fss7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="3" [(ngModel)]="formData.fss7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="4" [(ngModel)]="formData.fss7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="5" [(ngModel)]="formData.fss7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="6" [(ngModel)]="formData.fss7"/>
+                <li class="likert"><input id="radAgreeEnd7" type="radio" name="Agree7" value="7" [(ngModel)]="formData.fss7"/> Very Much
+            </ul>
+        </div>
+        
+        <div class = "lightContainer">
+    <p class = "questions"> 
+ 		I know what I have to do each step of the way.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart8" type="radio" name="Agree8" value="1" [(ngModel)]="formData.fss8" required/>
+                <li class="likert"><input type="radio" name="Agree8" value="2" [(ngModel)]="formData.fss8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="3" [(ngModel)]="formData.fss8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="4" [(ngModel)]="formData.fss8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="5" [(ngModel)]="formData.fss8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="6" [(ngModel)]="formData.fss8"/>
+                <li class="likert"><input id="radAgreeEnd8" type="radio" name="Agree8" value="7" [(ngModel)]="formData.fss8"/> Very Much
+            </ul>
+        </div>
+           
+	<div class = "container">
+    <p class = "questions"> 
+		 I feel that I have everything under control.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart9" type="radio" name="Agree9" value="1" [(ngModel)]="formData.fss9" required/>
+                <li class="likert"><input type="radio" name="Agree9" value="2" [(ngModel)]="formData.fss9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="3" [(ngModel)]="formData.fss9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="4" [(ngModel)]="formData.fss9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="5" [(ngModel)]="formData.fss9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="6" [(ngModel)]="formData.fss9"/>
+                <li class="likert"><input id="radAgreeEnd9" type="radio" name="Agree9" value="7" [(ngModel)]="formData.fss9"/> Very Much
+            </ul>
+       </div>
+
+        <div class = "lightContainer">
+    <p class = "questions"> 
+     I am completely lost in thought.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart10" type="radio" name="Agree10" value="1" [(ngModel)]="formData.fss10" required/>
+                <li class="likert"><input type="radio" name="Agree10" value="2" [(ngModel)]="formData.fss10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="3" [(ngModel)]="formData.fss10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="4" [(ngModel)]="formData.fss10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="5" [(ngModel)]="formData.fss10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="6" [(ngModel)]="formData.fss10"/>
+                <li class="likert"><input id="radAgreeEnd10" type="radio" name="Agree10" value="7" [(ngModel)]="formData.fss10"/> Very Much
+            </ul>
+        </div>
+
+        <div class = "container">
+    <p class = "questions"> 
+ 		 Something important to me is at stake here.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart11" type="radio" name="Agree11" value="1" [(ngModel)]="formData.fss11" required/>
+                <li class="likert"><input type="radio" name="Agree11" value="2" [(ngModel)]="formData.fss11"/>
+                <li class="likert"><input type="radio" name="Agree11" value="3" [(ngModel)]="formData.fss11"/>
+                <li class="likert"><input type="radio" name="Agree11" value="4" [(ngModel)]="formData.fss11"/>
+                <li class="likert"><input type="radio" name="Agree11" value="5" [(ngModel)]="formData.fss11"/>
+                <li class="likert"><input type="radio" name="Agree11" value="6" [(ngModel)]="formData.fss11"/>
+                <li class="likert"><input id="radAgreeEnd11" type="radio" name="Agree11" value="7" [(ngModel)]="formData.fss11"/> Very Much
+            </ul>
+        
+        </div>
+
+        <div class = "lightContainer">
+    <p class = "questions"> 
+ 		 I must not make any mistakes here.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart12" type="radio" name="Agree12" value="1" [(ngModel)]="formData.fss12" required/>
+                <li class="likert"><input type="radio" name="Agree12" value="2" [(ngModel)]="formData.fss12"/>
+                <li class="likert"><input type="radio" name="Agree12" value="3" [(ngModel)]="formData.fss12"/>
+                <li class="likert"><input type="radio" name="Agree12" value="4" [(ngModel)]="formData.fss12"/>
+                <li class="likert"><input type="radio" name="Agree12" value="5" [(ngModel)]="formData.fss12"/>
+                <li class="likert"><input type="radio" name="Agree12" value="6" [(ngModel)]="formData.fss12"/>
+                <li class="likert"><input id="radAgreeEnd12" type="radio" name="Agree12" value="7" [(ngModel)]="formData.fss12"/> Very Much
+            </ul>
+        </div>
+        
+        <div class = "container">
+    <p class = "questions"> 
+		 I am worried about failing.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart13" type="radio" name="Agree13" value="1" [(ngModel)]="formData.fss13" required/>
+                <li class="likert"><input type="radio" name="Agree13" value="2" [(ngModel)]="formData.fss13"/>
+                <li class="likert"><input type="radio" name="Agree13" value="3" [(ngModel)]="formData.fss13"/>
+                <li class="likert"><input type="radio" name="Agree13" value="4" [(ngModel)]="formData.fss13"/>
+                <li class="likert"><input type="radio" name="Agree13" value="5" [(ngModel)]="formData.fss13"/>
+                <li class="likert"><input type="radio" name="Agree13" value="6" [(ngModel)]="formData.fss13"/>
+                <li class="likert"><input id="radAgreeEnd13" type="radio" name="Agree13" value="7" [(ngModel)]="formData.fss13"/> Very Much
+            </ul>
+        </div>
+        
+        <div class = "lightContainer">
+    <p class = "questions"> 
+ 	 Compared to all other activities
+ 		which I partake in, this one is...
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Easy <input id="radAgreeStartA" type="radio" name="AgreeA" value="1" [(ngModel)]="formData.fssA" required/>
+                <li class="likert"><input type="radio" name="AgreeA" value="2" [(ngModel)]="formData.fssA"/>
+                <li class="likert"><input type="radio" name="AgreeA" value="3" [(ngModel)]="formData.fssA"/>
+                <li class="likert"><input type="radio" name="AgreeA" value="4" [(ngModel)]="formData.fssA"/>
+                <li class="likert"><input type="radio" name="AgreeA" value="5" [(ngModel)]="formData.fssA"/>
+                <li class="likert"><input type="radio" name="AgreeA" value="6" [(ngModel)]="formData.fssA"/>
+                <li class="likert"><input id="radAgreeEndA" type="radio" name="AgreeA" value="7" [(ngModel)]="formData.fssA"/> Difficult
+            </ul>
+        
+       </div>
+       
+        <div class = "container">
+    <p class = "questions"> 
+ 		I think that my competence in this area is...
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Low <input id="radAgreeStartB" type="radio" name="AgreeB" value="1" [(ngModel)]="formData.fssB" required/>
+                <li class="likert"><input type="radio" name="AgreeB" value="2" [(ngModel)]="formData.fssB"/>
+                <li class="likert"><input type="radio" name="AgreeB" value="3" [(ngModel)]="formData.fssB"/>
+                <li class="likert"><input type="radio" name="AgreeB" value="4" [(ngModel)]="formData.fssB"/>
+                <li class="likert"><input type="radio" name="AgreeB" value="5" [(ngModel)]="formData.fssB"/>
+                <li class="likert"><input type="radio" name="AgreeB" value="6" [(ngModel)]="formData.fssB"/>
+                <li class="likert"><input id="radAgreeEndB" type="radio" name="AgreeB" value="7" [(ngModel)]="formData.fssB"/> Hi
+            </ul>
+        </div>
+        
+        <div class = "lightContainer">
+    <p class = "questions"> 
+	 For me personally, the current demands are...
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Too low <input id="radAgreeStartC" type="radio" name="AgreeC" value="1" [(ngModel)]="formData.fssC" required/>
+                <li class="likert"><input type="radio" name="AgreeC" value="2" [(ngModel)]="formData.fssC"/>
+                <li class="likert"><input type="radio" name="AgreeC" value="3" [(ngModel)]="formData.fssC"/>
+                <li class="likert"><input type="radio" name="AgreeC" value="4" [(ngModel)]="formData.fssC"/>
+                <li class="likert"><input type="radio" name="AgreeC" value="5" [(ngModel)]="formData.fssC"/>
+                <li class="likert"><input type="radio" name="AgreeC" value="6" [(ngModel)]="formData.fssC"/>
+                <li class="likert"><input id="radAgreeEndC" type="radio" name="AgreeC" value="7" [(ngModel)]="formData.fssC"/> Too high
+            </ul>
+        
+    </div>
+
+        {{success}}
+        <div class="savebutton">
+            <input type="submit" value="Submit"/>
+        </div>
+        
+    </form>
+
+</div>
