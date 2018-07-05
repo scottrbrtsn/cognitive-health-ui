@@ -1,3 +1,183 @@
-<p>
-  personality works!
-</p>
+<div id="personality" ng-controller = "myController as myCtrl">
+    <form (ngSubmit)="saveSurvey()" name="flowForm">
+
+<h1> PERSONALITY SURVEY</h1>
+Based on the <a href="https://socialwork.buffalo.edu/content/dam/socialwork/home/self-care-kit/brief-big-five-personality-inventory.pdf" target="_blank">BFI Big Five Personality Inventory&nbsp;</a><br />
+
+    <select [(ngModel)]="formData.userName" name="name">
+        <option value="">--- NAME ---</option>
+
+    </select>
+    <div class = "container">
+            <p> I see myself as someone who … </p>
+    </div>
+        <div class = "container">
+            <p class = "questions">
+             ... is reserved.
+            </p>
+            
+                  <ul class="likert">
+                        <li class="likert"> Strongly Disagree <input id="radAgreeStart1" type="radio" name="Agree1" value="1" [(ngModel)]="formData.bfi1" required />
+                        <li class="likert"><input type="radio" name="Agree1" value="2" [(ngModel)]="formData.bfi1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="3" [(ngModel)]="formData.bfi1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="4" [(ngModel)]="formData.bfi1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="5" [(ngModel)]="formData.bfi1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="6" [(ngModel)]="formData.bfi1"/>
+                        <li class="likert"><input id="radAgreeEnd1" type="radio" name="Agree1" value="7" [(ngModel)]="formData.bfi1"/> Agree Strongly
+                  </ul>
+        </div>    
+
+
+        <div class = "lightContainer">
+            <p class = "questions">
+                ... is generally trusting.
+            </p>
+      
+            <ul class="likert">
+                  <li class="likert"> Strongly Disagree <input id="radAgreeStart2" type="radio" name="Agree2" value="1" [(ngModel)]="formData.bfi2" required/>
+                  <li class="likert"><input type="radio" name="Agree2" value="2" [(ngModel)]="formData.bfi2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="3" [(ngModel)]="formData.bfi2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="4" [(ngModel)]="formData.bfi2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="5" [(ngModel)]="formData.bfi2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="6" [(ngModel)]="formData.bfi2"/>
+                  <li class="likert"><input id="radAgreeEnd2" type="radio" name="Agree2" value="7" [(ngModel)]="formData.bfi2"/> Agree Strongly
+            </ul>
+      </div>
+
+   <div class = "container">
+    <p class = "questions"> 
+        ... tends to be lazy.
+
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart3" type="radio" name="Agree3" value="1" [(ngModel)]="formData.bfi3" required/>
+                <li class="likert"><input type="radio" name="Agree3" value="2" [(ngModel)]="formData.bfi3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="3" [(ngModel)]="formData.bfi3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="4" [(ngModel)]="formData.bfi3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="5" [(ngModel)]="formData.bfi3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="6" [(ngModel)]="formData.bfi3"/>
+                <li class="likert"><input id="radAgreeEnd3" type="radio" name="Agree3" value="7" [(ngModel)]="formData.bfi3"/> Agree Strongly
+            </ul>
+	</div>
+        
+       <div class = "lightContainer">
+    <p class = "questions"> 
+  ... is relaxed, handles stress well.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart4" type="radio" name="Agree4" value="1" [(ngModel)]="formData.bfi4" required/>
+                <li class="likert"><input type="radio" name="Agree4" value="2" [(ngModel)]="formData.bfi4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="3" [(ngModel)]="formData.bfi4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="4" [(ngModel)]="formData.bfi4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="5" [(ngModel)]="formData.bfi4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="6" [(ngModel)]="formData.bfi4"/>
+                <li class="likert"><input id="radAgreeEnd4" type="radio" name="Agree4" value="7" [(ngModel)]="formData.bfi4"/> Agree Strongly
+            </ul>
+     </div>
+
+       <div class = "container">
+    <p class = "questions"> 
+  ... has few artistic interests.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart5" type="radio" name="Agree5" value="1" [(ngModel)]="formData.bfi5" required/>
+                <li class="likert"><input type="radio" name="Agree5" value="2" [(ngModel)]="formData.bfi5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="3" [(ngModel)]="formData.bfi5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="4" [(ngModel)]="formData.bfi5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="5" [(ngModel)]="formData.bfi5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="6" [(ngModel)]="formData.bfi5"/>
+                <li class="likert"><input id="radAgreeEnd5" type="radio" name="Agree5" value="7" [(ngModel)]="formData.bfi5"/> Agree Strongly
+            </ul>
+      </div>
+      
+       <div class = "lightContainer">
+    <p class = "questions"> 
+  ... is outgoing, sociable.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart6" type="radio" name="Agree6" value="1" [(ngModel)]="formData.bfi6" required/>
+                <li class="likert"><input type="radio" name="Agree6" value="2" [(ngModel)]="formData.bfi6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="3" [(ngModel)]="formData.bfi6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="4" [(ngModel)]="formData.bfi6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="5" [(ngModel)]="formData.bfi6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="6" [(ngModel)]="formData.bfi6"/>
+                <li class="likert"><input id="radAgreeEnd6" type="radio" name="Agree6" value="7" [(ngModel)]="formData.bfi6"/> Agree Strongly
+            </ul>
+        </div>
+        
+        <div class = "container">
+    <p class = "questions"> 
+  ...tends to find fault with others.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart7" type="radio" name="Agree7" value="1" [(ngModel)]="formData.bfi7" required/>
+                <li class="likert"><input type="radio" name="Agree7" value="2" [(ngModel)]="formData.bfi7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="3" [(ngModel)]="formData.bfi7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="4" [(ngModel)]="formData.bfi7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="5" [(ngModel)]="formData.bfi7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="6" [(ngModel)]="formData.bfi7"/>
+                <li class="likert"><input id="radAgreeEnd7" type="radio" name="Agree7" value="7" [(ngModel)]="formData.bfi7"/> Agree Strongly
+            </ul>
+        </div>
+        
+        <div class = "lightContainer">
+    <p class = "questions"> 
+ 		... does a thorough job.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart8" type="radio" name="Agree8" value="1" [(ngModel)]="formData.bfi8" required/>
+                <li class="likert"><input type="radio" name="Agree8" value="2" [(ngModel)]="formData.bfi8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="3" [(ngModel)]="formData.bfi8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="4" [(ngModel)]="formData.bfi8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="5" [(ngModel)]="formData.bfi8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="6" [(ngModel)]="formData.bfi8"/>
+                <li class="likert"><input id="radAgreeEnd8" type="radio" name="Agree8" value="7" [(ngModel)]="formData.bfi8"/> Agree Strongly
+            </ul>
+        </div>
+           
+	<div class = "container">
+    <p class = "questions"> 
+		... gets nervous easily.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart9" type="radio" name="Agree9" value="1" [(ngModel)]="formData.bfi9" required/>
+                <li class="likert"><input type="radio" name="Agree9" value="2" [(ngModel)]="formData.bfi9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="3" [(ngModel)]="formData.bfi9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="4" [(ngModel)]="formData.bfi9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="5" [(ngModel)]="formData.bfi9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="6" [(ngModel)]="formData.bfi9"/>
+                <li class="likert"><input id="radAgreeEnd9" type="radio" name="Agree9" value="7" [(ngModel)]="formData.bfi9"/> Agree Strongly
+            </ul>
+       </div>
+
+        <div class = "lightContainer">
+    <p class = "questions"> 
+     ... has an active imagination
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Strongly Disagree <input id="radAgreeStart10" type="radio" name="Agree10" value="1" [(ngModel)]="formData.bfi10" required/>
+                <li class="likert"><input type="radio" name="Agree10" value="2" [(ngModel)]="formData.bfi10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="3" [(ngModel)]="formData.bfi10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="4" [(ngModel)]="formData.bfi10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="5" [(ngModel)]="formData.bfi10"/>
+                <li class="likert"><input type="radio" name="Agree10" value="6" [(ngModel)]="formData.bfi10"/>
+                <li class="likert"><input id="radAgreeEnd10" type="radio" name="Agree10" value="7" [(ngModel)]="formData.bfi10"/> Agree Strongly
+            </ul>
+        </div>
+
+        {{success}}
+        <div class="savebutton">
+            <input type="submit" value="Submit"/>
+        </div>
+        
+    </form>
+
+</div>

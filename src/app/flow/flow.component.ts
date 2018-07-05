@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {NgForm} from '@angular/forms';
-
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -29,8 +27,7 @@ export class FlowComponent implements OnInit {
   }
 
   saveSurvey = function() {
-    
-
+  
     this.formData.scoreTotal = this.formData.score1 - this.formData.score2;
     this.http.post(this.saveSurveyUrl, this.formData, httpOptions).subscribe(
       res => {

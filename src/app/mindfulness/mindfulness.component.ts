@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Component({
   selector: 'app-mindfulness',
@@ -6,10 +11,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mindfulness.component.css']
 })
 export class MindfulnessComponent implements OnInit {
+  formData:Object;
+  saveSurveyUrl = 'http://localhost:9000/surveys/mindfulness/saveSurvey/';
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+    this.formData = {
+      surveyName: 'mindfulness',
+      studentName: '',
+    };
+  }
+
+  saveSurvey = function() {
+  
+    this.formData.scoreTotal = this.formData.score1 - this.formData.score2;
+    this.http.post(this.saveSurveyUrl, this.formData, httpOptions).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log("Error occured");
+      }
+    );
   }
 
 }

@@ -1,3 +1,205 @@
-<p>
-  mindfulness works!
-</p>
+<div id="mindfulness">
+    <form ng-submit="saveSurvey()" id="mindForm">
+        <h1> MINDFULNESS SURVEY</h1>
+The <a href="http://www.mindfulness-extended.nl/content3/wp-content/uploads/2013/07/Freiburg-Mindfulness-Inventory.pdf" target="_blank">Frieburg Mindfulness Inventory&nbsp;</a><br />
+
+    <select [(ngModel)]="formData.userName" required name="name">
+        <option value="">--- NAME ---</option>
+
+    </select>
+
+        <div class = "container">
+            <p class = "questions">
+            1. I am opened to the experience of the present moment.
+            </p>
+
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radopenedStart" name="opened" type="radio" value="1" [(ngModel)]="formData.opened"/>
+                <li class="likert"><input name="opened" type="radio" value="2" [(ngModel)]="formData.opened"/>
+                <li class="likert"><input name="opened" type="radio" value="3" [(ngModel)]="formData.opened"/>
+                <li class="likert"><input name="opened" type="radio" value="4" [(ngModel)]="formData.opened"/>
+                <li class="likert"><input id="radopenedEnd" name="opened" type="radio" value="5" [(ngModel)]="formData.opened"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+            2. I sense my body, whether eating, cooking, cleaning or talking.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radBodyStart" name="body" type="radio" value="1" [(ngModel)]="formData.body"/>
+                <li class="likert"><input name="body" type="radio" value="2" [(ngModel)]="formData.body"/>
+                <li class="likert"><input name="body" type="radio" value="3" [(ngModel)]="formData.body"/>
+                <li class="likert"><input name="body" type="radio" value="4" [(ngModel)]="formData.body">
+                <li class="likert"><input id="radBodyEnd"name="body" type="radio" value="5" [(ngModel)]="formData.body"/> Almost Always
+            </ul>
+        </div>
+
+
+        <div class = "container">
+            <p class = "questions">
+    3. When I notice an absence of mind I gently return to the experience of the here and now.
+            </p>
+
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radReturnStart" name="return" type="radio" value="1" [(ngModel)]="formData.returned"/>
+                <li class="likert"><input name="return" type="radio" value="2" [(ngModel)]="formData.returned"/>
+                <li class="likert"><input name="return" type="radio" value="3" [(ngModel)]="formData.returned"/>
+                <li class="likert"><input name="return" type="radio" value="4" [(ngModel)]="formData.returned">
+                <li class="likert"><input id="radReturnEnd"name="return" type="radio" value="5" [(ngModel)]="formData.returned"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+    4. I am able to appreciate myself.
+            </p>
+
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radAppreciateStart" name="appreciate" type="radio" value="1" [(ngModel)]="formData.appreciate"/>
+                <li class="likert"><input name="appreciate" type="radio" value="2" [(ngModel)]="formData.appreciate"/>
+                <li class="likert"><input name="appreciate" type="radio" value="3" [(ngModel)]="formData.appreciate"/>
+                <li class="likert"><input name="appreciate" type="radio" value="4" [(ngModel)]="formData.appreciate">
+                <li class="likert"><input id="radAppreciateEnd"name="appreciate" type="radio" value="5" [(ngModel)]="formData.appreciate"/> Almost Always
+            </ul>
+        </div>
+
+
+        <div class = "container">
+            <p class = "questions">
+    5. I pay attention to what's behind my actions.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radIntentionsStart" name="intentions" type="radio" value="1" [(ngModel)]="formData.intentions"/>
+                <li class="likert"><input name="intentions" type="radio" value="2" [(ngModel)]="formData.intentions"/>
+                <li class="likert"><input name="intentions" type="radio" value="3" [(ngModel)]="formData.intentions"/>
+                <li class="likert"><input name="intentions" type="radio" value="4" [(ngModel)]="formData.intentions">
+                <li class="likert"><input id="radIntentionsEnd"name="intentions" type="radio" value="5" [(ngModel)]="formData.intentions"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+    6. I see my mistakes and difficulties without judging them.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radnonjudgementStart" name="nonjudgement" type="radio" value="1" [(ngModel)]="formData.nonjudgement"/>
+                <li class="likert"><input name="nonjudgement" type="radio" value="2" [(ngModel)]="formData.nonjudgement"/>
+                <li class="likert"><input name="nonjudgement" type="radio" value="3" [(ngModel)]="formData.nonjudgement"/>
+                <li class="likert"><input name="nonjudgement" type="radio" value="4" [(ngModel)]="formData.nonjudgement">
+                <li class="likert"><input id="radnonjudgementEnd"name="intentions" type="radio" value="5" [(ngModel)]="formData.nonjudgement"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "container">
+            <p class = "questions">
+    7. I feel connected to my experience in the here-and-now.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radConnectedStart" name="connected" type="radio" value="1" [(ngModel)]="formData.connected"/>
+                <li class="likert"><input name="connected" type="radio" value="2" [(ngModel)]="formData.connected"/>
+                <li class="likert"><input name="connected" type="radio" value="3" [(ngModel)]="formData.connected"/>
+                <li class="likert"><input name="connected" type="radio" value="4" [(ngModel)]="formData.connected">
+                <li class="likert"><input id="radConnectedEnd"name="connected" type="radio" value="5" [(ngModel)]="formData.connected"/> Almost Always
+            </ul>
+        </div>
+        <div class = "lightContainer">
+            <p class = "questions">
+    8. I accept unpleasant experience.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radAcceptanceStart" name="acceptance" type="radio" value="1" [(ngModel)]="formData.acceptance"/>
+                <li class="likert"><input name="acceptance" type="radio" value="2" [(ngModel)]="formData.acceptance"/>
+                <li class="likert"><input name="acceptance" type="radio" value="3" [(ngModel)]="formData.acceptance"/>
+                <li class="likert"><input name="acceptance" type="radio" value="4" [(ngModel)]="formData.acceptance">
+                <li class="likert"><input id="radAcceptanceEnd"name="acceptance" type="radio" value="5" [(ngModel)]="formData.acceptance"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "container">
+            <p class = "questions">
+    9. I am friendly to myself when things go wrong.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radFriendlyStart" name="friendly" type="radio" value="1" [(ngModel)]="formData.friendly"/>
+                <li class="likert"><input name="friendly" type="radio" value="2" [(ngModel)]="formData.friendly"/>
+                <li class="likert"><input name="friendly" type="radio" value="3" [(ngModel)]="formData.friendly"/>
+                <li class="likert"><input name="friendly" type="radio" value="4" [(ngModel)]="formData.friendly">
+                <li class="likert"><input id="radFriendlyEnd"name="friendly" type="radio" value="5" [(ngModel)]="formData.friendly"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+    10. I watch my feelings without getting lost in them.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radWatchfulStart" name="watchful" type="radio" value="1" [(ngModel)]="formData.watchful"/>
+                <li class="likert"><input name="watchful" type="radio" value="2" [(ngModel)]="formData.watchful"/>
+                <li class="likert"><input name="watchful" type="radio" value="3" [(ngModel)]="formData.watchful"/>
+                <li class="likert"><input name="watchful" type="radio" value="4" [(ngModel)]="formData.watchful">
+                <li class="likert"><input id="radWatchfulEnd"name="watchful" type="radio" value="5" [(ngModel)]="formData.watchful"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "container">
+            <p class = "questions">
+    11. In difficult situations, I can pause without immediately reacting.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radPauseStart" name="pause" type="radio" value="1" [(ngModel)]="formData.pause"/>
+                <li class="likert"><input name="pause" type="radio" value="2" [(ngModel)]="formData.pause"/>
+                <li class="likert"><input name="pause" type="radio" value="3" [(ngModel)]="formData.pause"/>
+                <li class="likert"><input name="pause" type="radio" value="4" [(ngModel)]="formData.pause">
+                <li class="likert"><input id="radPauseEnd"name="pause" type="radio" value="5" [(ngModel)]="formData.pause"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+    12. I experience moments of inner peace and ease even when things get hectic and stressful.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radPeaceStart" name="peace" type="radio" value="1" [(ngModel)]="formData.peace"/>
+                <li class="likert"><input name="peace" type="radio" value="2" [(ngModel)]="formData.peace"/>
+                <li class="likert"><input name="peace" type="radio" value="3" [(ngModel)]="formData.peace"/>
+                <li class="likert"><input name="peace" type="radio" value="4" [(ngModel)]="formData.peace">
+                <li class="likert"><input id="radPeaceEnd"name="peace" type="radio" value="5" [(ngModel)]="formData.peace"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "container">
+            <p class = "questions">
+    13. I am patient with myself and others.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radPatientStart" name="patient" type="radio" value="1" [(ngModel)]="formData.patient"/>
+                <li class="likert"><input name="patient" type="radio" value="2" [(ngModel)]="formData.patient"/>
+                <li class="likert"><input name="patient" type="radio" value="3" [(ngModel)]="formData.patient"/>
+                <li class="likert"><input name="patient" type="radio" value="4" [(ngModel)]="formData.patient">
+                <li class="likert"><input id="radPatientEnd"name="patient" type="radio" value="5" [(ngModel)]="formData.patient"/> Almost Always
+            </ul>
+        </div>
+
+        <div class = "lightContainer">
+            <p class = "questions">
+    14. I am able to smile when I notice how I sometimes make life difficult.
+            </p>
+            <ul class="likert">
+                <li class="likert">Rarely<input required id="radSmileStart" name="smile" type="radio" value="1" [(ngModel)]="formData.smile"/>
+                <li class="likert"><input name="smile" type="radio" value="2" [(ngModel)]="formData.smile"/>
+                <li class="likert"><input name="smile" type="radio" value="3" [(ngModel)]="formData.smile"/>
+                <li class="likert"><input name="smile" type="radio" value="4" [(ngModel)]="formData.smile">
+                <li class="likert"><input id="radSmileEnd"name="smile" type="radio" value="5" [(ngModel)]="formData.smile"/> Almost Always
+            </ul>
+        </div>
+
+        {{success}}
+        <div class="savebutton">
+            <input type="submit" value="Submit"/>
+        </div>
+    <br /><br />
+
+</form>
+
+</div>

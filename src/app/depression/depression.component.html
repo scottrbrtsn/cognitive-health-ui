@@ -1,3 +1,189 @@
-<p>
-  depression works!
-</p>
+<div id="depression" ng-controller = "myController as myCtrl">
+    <form (ngSubmit)="saveSurvey()" name="flowForm">
+
+<h1> DEPRESSION SURVEY</h1>
+Based on the <a href="http://www.cqaimh.org/pdf/tool_phq9.pdf" target="_blank">PHQ-9 Brief Depression Scale&nbsp;</a><br />
+
+    <select [(ngModel)]="formData.userName" name="name">
+        <option value="">--- NAME ---</option>
+
+    </select>
+    <div class = "container">
+    <p>
+        Over the last 2 weeks, how often have you been
+        bothered by the following problems? 
+      </p>
+      </div>
+
+        <div class = "container">
+            <p class = "questions">
+              Little interest or pleasure in doing things.
+            </p>
+            
+                  <ul class="likert">
+                        <li class="likert"> Not At All <input id="radAgreeStart1" type="radio" name="Agree1" value="1" [(ngModel)]="formData.phq1" required />
+                        <li class="likert"><input type="radio" name="Agree1" value="2" [(ngModel)]="formData.phq1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="3" [(ngModel)]="formData.phq1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="4" [(ngModel)]="formData.phq1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="5" [(ngModel)]="formData.phq1"/>
+                        <li class="likert"><input type="radio" name="Agree1" value="6" [(ngModel)]="formData.phq1"/>
+                        <li class="likert"><input id="radAgreeEnd1" type="radio" name="Agree1" value="7" [(ngModel)]="formData.phq1"/> Nearly Every Day
+                  </ul>
+        </div>    
+
+
+        <div class = "lightContainer">
+            <p class = "questions">
+            Feeling down, depressed or hopeless.
+            </p>
+      
+            <ul class="likert">
+                  <li class="likert"> Not At All <input id="radAgreeStart2" type="radio" name="Agree2" value="1" [(ngModel)]="formData.phq2" required/>
+                  <li class="likert"><input type="radio" name="Agree2" value="2" [(ngModel)]="formData.phq2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="3" [(ngModel)]="formData.phq2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="4" [(ngModel)]="formData.phq2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="5" [(ngModel)]="formData.phq2"/>
+                  <li class="likert"><input type="radio" name="Agree2" value="6" [(ngModel)]="formData.phq2"/>
+                  <li class="likert"><input id="radAgreeEnd2" type="radio" name="Agree2" value="7" [(ngModel)]="formData.phq2"/> Nearly Every Day
+            </ul>
+      </div>
+
+   <div class = "container">
+    <p class = "questions"> 
+     Trouble falling asleep, staying asleep, or sleeping too much.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart3" type="radio" name="Agree3" value="1" [(ngModel)]="formData.phq3" required/>
+                <li class="likert"><input type="radio" name="Agree3" value="2" [(ngModel)]="formData.phq3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="3" [(ngModel)]="formData.phq3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="4" [(ngModel)]="formData.phq3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="5" [(ngModel)]="formData.phq3"/>
+                <li class="likert"><input type="radio" name="Agree3" value="6" [(ngModel)]="formData.phq3"/>
+                <li class="likert"><input id="radAgreeEnd3" type="radio" name="Agree3" value="7" [(ngModel)]="formData.phq3"/> Nearly Every Day
+            </ul>
+	</div>
+        
+       <div class = "lightContainer">
+    <p class = "questions"> 
+  Feeling tired or having little energy.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart4" type="radio" name="Agree4" value="1" [(ngModel)]="formData.phq4" required/>
+                <li class="likert"><input type="radio" name="Agree4" value="2" [(ngModel)]="formData.phq4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="3" [(ngModel)]="formData.phq4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="4" [(ngModel)]="formData.phq4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="5" [(ngModel)]="formData.phq4"/>
+                <li class="likert"><input type="radio" name="Agree4" value="6" [(ngModel)]="formData.phq4"/>
+                <li class="likert"><input id="radAgreeEnd4" type="radio" name="Agree4" value="7" [(ngModel)]="formData.phq4"/> Nearly Every Day
+            </ul>
+     </div>
+
+       <div class = "container">
+    <p class = "questions"> 
+Poor appetite or overeating.        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart5" type="radio" name="Agree5" value="1" [(ngModel)]="formData.phq5" required/>
+                <li class="likert"><input type="radio" name="Agree5" value="2" [(ngModel)]="formData.phq5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="3" [(ngModel)]="formData.phq5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="4" [(ngModel)]="formData.phq5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="5" [(ngModel)]="formData.phq5"/>
+                <li class="likert"><input type="radio" name="Agree5" value="6" [(ngModel)]="formData.phq5"/>
+                <li class="likert"><input id="radAgreeEnd5" type="radio" name="Agree5" value="7" [(ngModel)]="formData.phq5"/> Nearly Every Day
+            </ul>
+      </div>
+      
+       <div class = "lightContainer">
+    <p class = "questions"> 
+Feeling bad about yourself - or that you're a failure or have let yourself or your family down.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart6" type="radio" name="Agree6" value="1" [(ngModel)]="formData.phq6" required/>
+                <li class="likert"><input type="radio" name="Agree6" value="2" [(ngModel)]="formData.phq6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="3" [(ngModel)]="formData.phq6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="4" [(ngModel)]="formData.phq6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="5" [(ngModel)]="formData.phq6"/>
+                <li class="likert"><input type="radio" name="Agree6" value="6" [(ngModel)]="formData.phq6"/>
+                <li class="likert"><input id="radAgreeEnd6" type="radio" name="Agree6" value="7" [(ngModel)]="formData.phq6"/> Nearly Every Day
+            </ul>
+        </div>
+        
+        <div class = "container">
+    <p class = "questions"> 
+   Trouble concentrating on things, such as reading the newspaper or watching television.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart7" type="radio" name="Agree7" value="1" [(ngModel)]="formData.phq7" required/>
+                <li class="likert"><input type="radio" name="Agree7" value="2" [(ngModel)]="formData.phq7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="3" [(ngModel)]="formData.phq7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="4" [(ngModel)]="formData.phq7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="5" [(ngModel)]="formData.phq7"/>
+                <li class="likert"><input type="radio" name="Agree7" value="6" [(ngModel)]="formData.phq7"/>
+                <li class="likert"><input id="radAgreeEnd7" type="radio" name="Agree7" value="7" [(ngModel)]="formData.phq7"/> Nearly Every Day
+            </ul>
+        </div>
+        
+        <div class = "lightContainer">
+    <p class = "questions"> 
+     Moving or speaking so slowly that other people could have noticed.  Or, the opposite - being so fidgety
+     or restless that you have been moving around a lot more than usual.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart8" type="radio" name="Agree8" value="1" [(ngModel)]="formData.phq8" required/>
+                <li class="likert"><input type="radio" name="Agree8" value="2" [(ngModel)]="formData.phq8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="3" [(ngModel)]="formData.phq8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="4" [(ngModel)]="formData.phq8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="5" [(ngModel)]="formData.phq8"/>
+                <li class="likert"><input type="radio" name="Agree8" value="6" [(ngModel)]="formData.phq8"/>
+                <li class="likert"><input id="radAgreeEnd8" type="radio" name="Agree8" value="7" [(ngModel)]="formData.phq8"/> Nearly Every Day
+            </ul>
+        </div>
+           
+	<div class = "container">
+    <p class = "questions"> 
+		 Thoughts that you would be better off dead or of hurting yourself in some way.
+        </p>
+        
+            <ul class="likert">
+                <li class="likert"> Not At All <input id="radAgreeStart9" type="radio" name="Agree9" value="1" [(ngModel)]="formData.phq9" required/>
+                <li class="likert"><input type="radio" name="Agree9" value="2" [(ngModel)]="formData.phq9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="3" [(ngModel)]="formData.phq9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="4" [(ngModel)]="formData.phq9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="5" [(ngModel)]="formData.phq9"/>
+                <li class="likert"><input type="radio" name="Agree9" value="6" [(ngModel)]="formData.phq9"/>
+                <li class="likert"><input id="radAgreeEnd9" type="radio" name="Agree9" value="7" [(ngModel)]="formData.phq9"/> Nearly Every Day
+            </ul>
+       </div>
+
+       <div class = "lightContainer">
+          <p class = "questions"> 
+          If you checked off any problems, how difficult have those problmes made it for you to 
+          Do your work, take care of things at home, or get along with other people?
+              </p>
+              
+                  <ul class="likert">
+                      <li class="likert"> Not Difficult At All <input id="radAgreeStart8" type="radio" name="Agree8" value="1" [(ngModel)]="formData.phq10" required/>
+                      <li class="likert"><input type="radio" name="Agree8" value="2" [(ngModel)]="formData.phq10"/>
+                      <li class="likert"><input type="radio" name="Agree8" value="3" [(ngModel)]="formData.phq10"/>
+                      <li class="likert"><input type="radio" name="Agree8" value="4" [(ngModel)]="formData.phq10"/>
+                      <li class="likert"><input type="radio" name="Agree8" value="5" [(ngModel)]="formData.phq10"/>
+                      <li class="likert"><input type="radio" name="Agree8" value="6" [(ngModel)]="formData.phq10"/>
+                      <li class="likert"><input id="radAgreeEnd8" type="radio" name="Agree8" value="7" [(ngModel)]="formData.phq10"/> Extremely Difficult
+                  </ul>
+              </div>
+
+     
+
+        {{success}}
+        <div class="savebutton">
+            <input type="submit" value="Submit"/>
+        </div>
+        
+    </form>
+
+</div>
