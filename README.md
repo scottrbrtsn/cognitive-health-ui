@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-Communicates with backend server@: https://github.com/scottrbrtsn/w.i.p
+Communicates with backend server@: https://github.com/scottrbrtsn/cognitive-health-toolshed
 
 
 ## Development server
