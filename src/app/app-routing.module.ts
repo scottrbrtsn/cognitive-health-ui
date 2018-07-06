@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'prideful', component: PridefulComponent },
   { path: 'hopeless', component: HopelessComponent },
   { path: 'willing', component: WillingComponent },
-  { path: 'chat', component: ChatComponent },
+  { path: 'chatbot', component: ChatComponent },
   { path: 'game', component: GameComponent }
 ];
 
