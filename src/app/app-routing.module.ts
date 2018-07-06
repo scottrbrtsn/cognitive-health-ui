@@ -9,6 +9,8 @@ import { StartComponent } from './start/start.component';
 import { PridefulComponent } from './prideful/prideful.component';
 import { HopelessComponent } from './hopeless/hopeless.component';
 import { WillingComponent } from './willing/willing.component';
+import { ChatComponent } from './chat/chat.component';
+import { GameComponent } from './game/game.component';
 
 const routes: Routes = [
   { path: 'anxiety', component: AnxietyComponent },
@@ -19,7 +21,9 @@ const routes: Routes = [
   { path: 'start', component: StartComponent },
   { path: 'prideful', component: PridefulComponent },
   { path: 'hopeless', component: HopelessComponent },
-  { path: 'willing', component: WillingComponent }
+  { path: 'willing', component: WillingComponent },
+  { path: 'chat', component: ChatComponent },
+  { path: 'game', component: GameComponent }
 ];
 
 

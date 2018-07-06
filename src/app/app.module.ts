@@ -16,6 +16,8 @@ import { PridefulComponent } from './prideful/prideful.component';
 import { HopelessComponent } from './hopeless/hopeless.component';
 import { WillingComponent } from './willing/willing.component';
 import { AppRoutingModule } from './app-routing.module';
+import { GameComponent } from './game/game.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AppRoutingModule } from './app-routing.module';
     StartComponent,
     PridefulComponent,
     HopelessComponent,
-    WillingComponent
+    WillingComponent,
+    GameComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

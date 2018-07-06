@@ -1,55 +1,108 @@
 <!DOCTYPE html>
 <html>
-<body>
-<div id='vertical-menu'>
-    <ul id='cssnav'>
-        <li class='sub'><a href='/'>  Home  </a></li>
-        <li class='sub'><a href=''>Daily Metrics</a>
-            <ul>
-                <li class='active'>
-                    <nav>
-                        <a routerLink="/flow">Flow</a>
-                    </nav>
-                </li>
-                <li class='active'>
-                    <nav>
-                        <a routerLink="/mindfulness">Mindfulness</a>
-                    </nav>
-                </li>
-                <li class='active'>
-                        <nav>
-                            <a routerLink="/anxiety">Anxiety</a>
-                        </nav>
-                    </li>
-                <li class='active'>
-                    <nav>
-                        <a routerLink="/depression">Depression</a>
-                     </nav>
-                </li>
-            </ul>
-        </li>
-
-        <li class='sub'><a href=''>Inspiration</a>
-            <ul>
-                <li class='active'><a href='https://scottrbrtsn.github.io' target="_blank">Words of reason</a></li>
-                <li class='active'><a href='/game/game.html'>Game World</a></li>
-            </ul>
-        </li>
-        <li class='sub'><a href=''>Single Entry</a>
-            <ul>
-                    <li class='active'>
-                            <nav>
-                                <a routerLink="/personality">Personality</a>
-                             </nav>
-                    </li>
-            </ul>
-        </li>
-    </ul>
-    <br>
-</div>
-
-</body>
-</html> 
-
-
-
+                <head>
+               
+                </head>
+                <body>
+                    <div class="area"></div
+                        ><nav class="main-menu">
+                          <ul>
+                              <li>
+                                  <a routerLink="/">
+                                      <i class="fa fa-home fa-2x"></i>
+                                      <span class="nav-text">
+                                          Dashboard
+                                      </span>
+                                  </a>
+                                
+                              </li>
+                              <li class="has-subnav">
+                                    <a routerLink="/flow">
+                                      <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                      <span class="nav-text">
+                                          Flow
+                                      </span>
+                                  </a>
+                                  
+                              </li>
+                              <li class="has-subnav">
+                                    <a routerLink="/mindfulness">
+                                        <i class="fa fa-cloud-download fa-2x"></i>
+                                      <span class="nav-text">
+                                          Mindfulness
+                                      </span>
+                                  </a>
+                                  
+                              </li>
+                              <li class="has-subnav">
+                                  <a routerLink="/depression">
+                                     <i class="fa fa-medkit fa-2x"></i>
+                                      <span class="nav-text">
+                                          Depression
+                                      </span>
+                                  </a>
+                                 
+                              </li>
+                              <li>
+                                    <a routerLink="/anxiety">
+                                        <i class="fa fa-coffee fa-2x"></i>
+                                      <span class="nav-text">
+                                          Anxiety
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a routerLink="/personality">
+                                      <i class="fa fa-font fa-2x"></i>
+                                      <span class="nav-text">
+                                         Personality
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                    <a href='https://scottrbrtsn.github.io' target="_blank">
+                                     <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                                      <span class="nav-text">
+                                            Words of reason
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                 <a routerLink="/chatbot">
+                                      <i class="fa fa-comment fa-2x"></i>
+                                      <span class="nav-text">
+                                          Chat
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a routerLink="/metrics">
+                                     <i class="fa fa-line-chart"></i>
+                                      <span class="nav-text">
+                                          Metrics
+                                      </span>
+                                  </a>
+                              </li>
+                              <li>
+                                    <a routerLink="/game">
+                                         <i class="fa fa-gamepad fa-2x"></i>
+                                         <span class="nav-text">
+                                             Gamify
+                                         </span>
+                                     </a>
+                                 </li>
+                          </ul>
+              
+                          <ul class="logout">
+                              <li>
+                                 <a routerLink="#">
+                                       <i class="fa fa-power-off fa-2x"></i>
+                                      <span class="nav-text">
+                                          Logout
+                                      </span>
+                                  </a>
+                              </li>  
+                          </ul>
+                      </nav>
+    </body>
+</html>

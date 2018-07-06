@@ -1,0 +1,103 @@
+#game{
+    position:relative;
+    top: 20px;
+    width: 700px;
+    margin: auto;
+    font-family:"Lato", sans-serif;
+}
+
+#box1N{
+width:100%;
+height:100%;
+display:none;
+}
+
+#box1S{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box1E{
+width:100%;
+height:100%;
+display: inline;
+}
+
+#box1W{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box2N{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box2S{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box2E{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box2W{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box3N{
+width:100%;
+height:100%;
+display:none;
+}
+
+#box3S{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box3E{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box3W{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box4N{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box4S{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box4E{
+width:100%;
+height:100%;
+display: none;
+}
+
+#box4W{
+width:100%;
+height:100%;
+display: none;
+}
