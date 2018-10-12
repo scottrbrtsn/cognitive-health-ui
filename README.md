@@ -19,10 +19,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## To Do
 
-- Give user feedback on successful save of a survey.
 - Create charts for survey trends over time.
-- Update the chatbot to convert commented Angular 1.5 code to TS.  
 - PWA (erize) the app such that it is more mobile-friendly
+- Expand chat
+- Expand game world
+- Develop concept for Jungian space
 - Push both ui and toolshed to AWS for a prod instance.
 
 

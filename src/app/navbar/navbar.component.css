@@ -21,6 +21,8 @@ overflow:visible;
 
 .main-menu {
 background:#212121;
+background-image: url(../../assets/pics/Shiranaido.jpg);
+background-size: 100%;
 border-right:1px solid #e5e5e5;
 position:fixed;
 top:0;
@@ -50,7 +52,7 @@ position:relative;
 display:table;
 border-collapse:collapse;
 border-spacing:0;
-color:#999;
+color:rgb(255, 253, 253);
  font-family: arial;
 font-size: 14px;
 text-decoration:none;

@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GameComponent } from './game/game.component';
 import { ChatComponent } from './chat/chat.component';
 import { JungianWorldComponent } from './jungian-world/jungian-world.component';
+import { MetricsComponent } from './metrics/metrics.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { JungianWorldComponent } from './jungian-world/jungian-world.component';
     WillingComponent,
     GameComponent,
     ChatComponent,
-    JungianWorldComponent
+    JungianWorldComponent,
+    MetricsComponent
   ],
   imports: [
     BrowserModule,

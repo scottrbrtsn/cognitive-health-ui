@@ -11,6 +11,8 @@ const httpOptions = {
   styleUrls: ['./mindfulness.component.css']
 })
 export class MindfulnessComponent implements OnInit {
+  success:string;
+  isSuccess:boolean;
   formData:Object;
   saveSurveyUrl = 'http://localhost:9000/surveys/mindfulness/saveSurvey/';
 
@@ -29,9 +31,12 @@ export class MindfulnessComponent implements OnInit {
     this.http.post(this.saveSurveyUrl, this.formData, httpOptions).subscribe(
       res => {
         console.log(res);
+        this.success = "SUCCESS";
+        this.isSuccess = true;
       },
       err => {
         console.log("Error occured");
+        this.success = "ERROR";
       }
     );
   }

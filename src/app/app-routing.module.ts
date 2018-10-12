@@ -11,6 +11,8 @@ import { HopelessComponent } from './hopeless/hopeless.component';
 import { WillingComponent } from './willing/willing.component';
 import { ChatComponent } from './chat/chat.component';
 import { GameComponent } from './game/game.component';
+import { MetricsComponent } from './metrics/metrics.component';
+
 
 const routes: Routes = [
   { path: 'anxiety', component: AnxietyComponent },
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: 'hopeless', component: HopelessComponent },
   { path: 'willing', component: WillingComponent },
   { path: 'chatbot', component: ChatComponent },
-  { path: 'game', component: GameComponent }
+  { path: 'game', component: GameComponent },
+  { path: 'metrics', component: MetricsComponent }
+
 ];
 
 @NgModule({

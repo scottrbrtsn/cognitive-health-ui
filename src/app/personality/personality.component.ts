@@ -12,6 +12,8 @@ const httpOptions = {
 })
 export class PersonalityComponent implements OnInit {
 
+  success:string;
+  isSucces:boolean;
   formData:Object;
   saveSurveyUrl = 'http://localhost:9000/surveys/personality/saveSurvey/';
 
@@ -31,9 +33,12 @@ export class PersonalityComponent implements OnInit {
     this.http.post(this.saveSurveyUrl, this.formData, httpOptions).subscribe(
       res => {
         console.log(res);
+        this.success = "SUCCESS";
+        this.isSuccess = true;
       },
       err => {
         console.log("Error occured");
+        this.success = "ERROR";
       }
     );
   }

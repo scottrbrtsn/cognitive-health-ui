@@ -32,21 +32,39 @@ export class ChatComponent implements OnInit {
     this.state = stateChange;
   }
 
+  speak = function (){
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[0]; // Note: some voices don't support altering params
+    //msg.voiceURI = 'native';
+    msg.volume = 1; // 0 to 1
+    msg.rate = 1; // 0.1 to 10
+    msg.pitch = .5; //0 to 2
+    msg.text = this.response;
+    msg.lang = 'en-US';
+    window.speechSynthesis.speak(msg);
+  }
+ 
+
   chat = function () {
     console.log("chat begin", this.state);
     if (this.state == 0) {
       this.response = this.intro(this.userInput) + this.whatsYourName();
+      this.speak();
       this.setState(1);
     } else if (this.state == 1) {
       this.name = this.userInput;
       this.response = this.helloName(this.name);
       this.setState(2);
+      this.speak();
       setTimeout(()=>{this.chat();},3000);
     } else if (this.state == 2) {
       this.response = this.charlie() + this.game(this.name);
+      this.speak();
       this.setState(3);
     } else if (this.state == 3) {
       this.reponse = this.playGame(this.userInput);
+      this.speak();
     }
 
   }
@@ -86,10 +104,11 @@ export class ChatComponent implements OnInit {
 
   playGame = function (input) {
     if (input == "yes" || input == "Yes" || input == "YES" || input == "yep" || input == "sure" || input == "why not") {
-      this.response = "I would too, " + this.name + ", but I don't know how to play one yet.";
+      this.response = "I would too, " + this.name + " Maybe my creator will find some time to evolve me. In the meantime, I can show you where you live.";
+      //maybe put this into a service
       setTimeout(()=> {this.advertiseMe();}, 5000);
     } else if (input == "yay" || input == "YAY" || input == "ok" || input == "OK" || input == "Ok" || input == "Sure" || input == "y not") {
-      this.response = "I would too, " + this.name + ", but I don't know how to play one yet.";
+      this.response = "I would too, " + this.name + " Maybe my creator will find some time to evolve me. In the meantime, I can show you where you live.";
       setTimeout(()=> {this.advertiseMe();}, 5000);
     } else if (input == "NO" || input == "No" || input == "no" || input == "nope" || input == "not really") {
       this.response = "Aren't you playing one right now?";
@@ -100,25 +119,25 @@ export class ChatComponent implements OnInit {
   }
 
   advertiseMe = function () {
-    this.response = "Maybe if someone pays us for a website I could learn to play a game soon.  If you find someone who needs a website built, I promise I'll play a game with you soon after that."
-    setTimeout(()=> {this.goodBye();}, 5000);
-  }
-
-  goodBye = function () {
-    this.response = this.response + "\n\nFare well, my friend " + this.name + ".";
-    //maybe put this into a service
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.showPosition);
     } else {
       this.location = "Geolocation is not supported by this browser.";
     }
+    this.response = "I promise I'll play a game with you soon after that.";
+    this.speak();
+    setTimeout(()=> {this.goodBye();}, 5000);
+  }
+
+  goodBye = function () {
+    this.response = "Fare well, my friend " + this.name + ".";
+    this.speak();
+    
   }
 
   dontBeRude = function () {
     return "I'm sorry I didn't quite catch that?  \n\n What did you say?  \n\n I hope you're not trying to be rude.";
   }
-
-
 
   showPosition = (position) => {
     this.latlon = position.coords.latitude + "," + position.coords.longitude;

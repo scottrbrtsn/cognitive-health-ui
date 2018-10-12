@@ -14,6 +14,8 @@ const httpOptions = {
 export class AnxietyComponent implements OnInit {
 
   formData:Object;
+  success:string;
+  isSuccess:boolean;
   saveSurveyUrl = 'http://localhost:9000/surveys/anxiety/saveSurvey/';
 
   constructor(private http: HttpClient) { }
@@ -31,9 +33,12 @@ export class AnxietyComponent implements OnInit {
     this.http.post(this.saveSurveyUrl, this.formData, httpOptions).subscribe(
       res => {
         console.log(res);
+        this.success = "SUCCESS";
+        this.isSuccess = true;
       },
       err => {
         console.log("Error occured");
+        this.success = "ERROR";
       }
     );
   }
