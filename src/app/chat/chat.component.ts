@@ -34,7 +34,6 @@ export class ChatComponent implements OnInit {
 
   chat = function () {
     console.log("chat begin", this.state);
- 
     if (this.state == 0) {
       this.response = this.intro(this.userInput) + this.whatsYourName();
       this.setState(1);
@@ -124,10 +123,10 @@ export class ChatComponent implements OnInit {
   showPosition = (position) => {
     this.latlon = position.coords.latitude + "," + position.coords.longitude;
     var zoom = "13";
-    this.locationString = "Your Location:";
-    //add img_url to scope for saving
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+ this.latlon + "&zoom=" + zoom + "&size=400x300&sensor=false&maptype=roadmap&key=AIzaSyDR0hZSYUNmJsNfhtJYHt4ZLPJVlvb5lmY";
-    document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+    this.locationString = "Your Location is about to open: Please allow popups.";
+    const url = "https://www.google.com/maps/@?api=1&map_action=map&center=" + this.latlon + "&zoom=14&basemap=terrain";
+    window.open(url, "_blank");
+
   }
 
   //        $http.get('/userInfo')
