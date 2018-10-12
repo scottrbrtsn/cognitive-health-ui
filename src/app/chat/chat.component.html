@@ -1,17 +1,17 @@
-<div>
+<div id="chat">
   <div id="charlie">
-   {{$ctrl.response}}
+   {{response}}
   </div>
   <br />
-  <input ng-model="$ctrl.userInput" placeholder="Say hello" type="text" />
+  <input [(ngModel)]="userInput" placeholder="Say hello" type="text" />
   <br />
   <br />
-  <button ng-click="$ctrl.chat()">Send your message!</button>
+  <button (click)="chat()">Send your message!</button>
 
   <div id="user">
-   Name: {{$ctrl.userData}}
+   Name: {{userData}}
   <br>
-   Location: {{$ctrl.latlon}}
+   Location: {{latlon}}
    <div id="mapholder"></div>
   </div>
 </div>
