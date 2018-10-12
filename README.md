@@ -2,12 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-Communicates with backend server@: https://github.com/scottrbrtsn/cognitive-health-toolshed
+Communicates with backend server@: `http://localhost:9000/`
 
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Go to : https://github.com/scottrbrtsn/cognitive-health-toolshed
+Clone and run the toolshed.
 
 ## Code scaffolding
 

@@ -10,26 +10,27 @@ export class GameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.currentHall = 0;
+    this.currentHallSrc = "/assets/world-images/StraightHall/" + this.currentHall + ".jpg";
 
-  const view1N = document.getElementById("box1N");
-  const view1S = document.getElementById("box1S");
-  const view1E = document.getElementById("box1E");
-  const view1W = document.getElementById("box1W");
-  const view2N = document.getElementById("box2N");
-  const view2S = document.getElementById("box2S");
-  const view2E = document.getElementById("box2E");
-  const view2W = document.getElementById("box2W");
-  const view3N = document.getElementById("box3N");
-  const view3S = document.getElementById("box3S");
-  const view3E = document.getElementById("box3E");
-  const view3W = document.getElementById("box3W");
-  const view4N = document.getElementById("box4N");
-  const view4S = document.getElementById("box4S");
-  const view4E = document.getElementById("box4E");
-  const view4W = document.getElementById("box4W");
-  this.views = [view1E, view1N, view1W, view1S, view2E, view2N, 
-      view2W, view2S, view3E, view3N, view3W, view3S, view4E, view4N, view4W, view4S];
-  
+    const view1N = document.getElementById("box1N");
+    const view1S = document.getElementById("box1S");
+    const view1E = document.getElementById("box1E");
+    const view1W = document.getElementById("box1W");
+    const view2N = document.getElementById("box2N");
+    const view2S = document.getElementById("box2S");
+    const view2E = document.getElementById("box2E");
+    const view2W = document.getElementById("box2W");
+    const view3N = document.getElementById("box3N");
+    const view3S = document.getElementById("box3S");
+    const view3E = document.getElementById("box3E");
+    const view3W = document.getElementById("box3W");
+    const view4N = document.getElementById("box4N");
+    const view4S = document.getElementById("box4S");
+    const view4E = document.getElementById("box4E");
+    const view4W = document.getElementById("box4W");
+    this.views = [view1E, view1N, view1W, view1S, view2E, view2N, 
+        view2W, view2S, view3E, view3N, view3W, view3S, view4E, view4N, view4W, view4S];
     this.current = this.views[0];
     this.east = 0;
     this.north = 1;
@@ -40,9 +41,9 @@ export class GameComponent implements OnInit {
     this.direction = 0;
   }
 
-
-
-  views:object;
+  currentHallSrc:string;
+  currentHall:number;
+  views:Array<object>;
   current:object;
   east:number;
   north :number;
@@ -85,6 +86,10 @@ export class GameComponent implements OnInit {
       console.log("blockNumber: " + this.blockNumber);
   }
 
+  forwardHall = function(){
+    this.currentHall = (this.currentHall + 1) %9 ;
+    this.currentHallSrc = "/assets/world-images/StraightHall/" + this.currentHall + ".jpg";
+  }
 
   forward = function(){
       if(this.direction%4 == 0 && this.blockNumber%10 < 1){ //move east

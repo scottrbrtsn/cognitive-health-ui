@@ -26,7 +26,6 @@ const routes: Routes = [
   { path: 'game', component: GameComponent }
 ];
 
-
 @NgModule({
   exports: [
     RouterModule
