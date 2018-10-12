@@ -9,8 +9,20 @@ Communicates with backend server@: `http://localhost:9000/`
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Go to : https://github.com/scottrbrtsn/cognitive-health-toolshed
-Clone and run the toolshed.
+## To Test
+
+1. Go to : https://github.com/scottrbrtsn/cognitive-health-toolshed
+2. Clone and run the toolshed. (requires maven: `mvn clean spring-boot:run`, also requires postgres to be running with a database created called `cognitive-health-toolshed`)
+3. Run the development server `ng serve`
+4. Look at the controllers to see the various endpoints to test.
+5. Fill out a survey and verify data saved
+
+## To Do
+
+- Give user feedback on successful save of a survey.
+- Create charts for survey trends over time.
+- Update the chatbot to convert commented Angular 1.5 code to TS.  
+
 
 ## Code scaffolding
 
