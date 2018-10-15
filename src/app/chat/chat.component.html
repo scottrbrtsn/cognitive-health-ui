@@ -12,5 +12,15 @@
   <br>
    {{locationString}} {{latlon}}
   </div>
+
+
+  <input [(ngModel)]="markovInput" placeholder="Start Markov" type="text" />
+
+  <button (click)="startMarkov()">Start Markov</button>
+  <div>
+   <p>
+     {{markovString}}
+    </p>
+  </div>
 </div>
 

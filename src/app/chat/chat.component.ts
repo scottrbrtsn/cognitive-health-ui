@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Component({
   selector: 'app-chat',
@@ -7,11 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+    this.markovUrl = "http://localhost:9000/chat/getMarkov?userInput="
+    this.markovString = "Hello I love to talk grass.";
     this.state = 0;
     this.userInput = "";
+    this.markovInput = "";
     this.name = "";
     this.latlon = "";
     this.userData = {
@@ -20,6 +28,9 @@ export class ChatComponent implements OnInit {
     };
   }
 
+  markovInput:string;
+  markovUrl:string;
+  markovString:string;
   locationString:string;
   location: string;
   state: number;
@@ -27,6 +38,29 @@ export class ChatComponent implements OnInit {
   name: string;
   latlon: string;
   userData: object;
+
+  startMarkov = function(){
+    this.markovString = this.markovInput;
+    this.markov();
+  }
+
+  markov = function(){
+    let pathPhrase  = this.markovString.split(' ').join('+');
+    this.http.get(this.markovUrl+pathPhrase, {responseType: "text"}).subscribe(
+      res => {
+        console.log(res);
+        this.success = "SUCCESS";
+        this.isSuccess = true;
+        this.markovString = this.markovString + "/n/n" + res;
+      },
+      err => {
+        console.log("Error occured: " + this.markovUrl + pathPhrase);
+        this.success = "ERROR"
+        console.log(err);
+      }
+    );
+    setTimeout(()=>{this.markov();},5000);
+  }
 
   setState = function (stateChange) {
     this.state = stateChange;
