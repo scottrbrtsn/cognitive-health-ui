@@ -16,7 +16,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.markovUrl = "http://localhost:9000/chat/getMarkov?userInput="
-    this.markovString = "Hello I love to talk grass.";
+    this.markovString = "";
     this.state = 0;
     this.userInput = "";
     this.markovInput = "";
