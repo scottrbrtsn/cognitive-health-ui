@@ -20,6 +20,7 @@ import { GameComponent } from './game/game.component';
 import { ChatComponent } from './chat/chat.component';
 import { JungianWorldComponent } from './jungian-world/jungian-world.component';
 import { MetricsComponent } from './metrics/metrics.component';
+import { MetricsService } from './services/metrics.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { MetricsComponent } from './metrics/metrics.component';
   exports:[
     RouterModule
   ],
-  providers: [],
+  providers: [MetricsService],
   bootstrap: [AppComponent]
 })
 

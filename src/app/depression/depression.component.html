@@ -4,10 +4,8 @@
 <h1> DEPRESSION SURVEY</h1>
 Based on the <a href="http://www.cqaimh.org/pdf/tool_phq9.pdf" target="_blank">PHQ-9 Brief Depression Scale&nbsp;</a><br />
 
-    <select [(ngModel)]="formData.userName" name="name">
-        <option value="">--- NAME ---</option>
+<input [(ngModel)]="formData.userName" name="userName" placeholder="Name" type="text" required/>
 
-    </select>
     <div class = "container">
     <p>
         Over the last 2 weeks, how often have you been

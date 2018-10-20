@@ -23,7 +23,6 @@ export class DepressionComponent implements OnInit {
   ngOnInit() {
     this.formData = {
       surveyName: 'depression',
-      studentName: '',
     };
   }
 

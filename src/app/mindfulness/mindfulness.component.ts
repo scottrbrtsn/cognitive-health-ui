@@ -21,7 +21,6 @@ export class MindfulnessComponent implements OnInit {
   ngOnInit() {
     this.formData = {
       surveyName: 'mindfulness',
-      studentName: '',
     };
   }
 

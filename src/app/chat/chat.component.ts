@@ -51,7 +51,7 @@ export class ChatComponent implements OnInit {
         console.log(res);
         this.success = "SUCCESS";
         this.isSuccess = true;
-        this.markovString = this.markovString + "/n/n" + res;
+        this.markovString = this.markovString + "\n\n" + res;
       },
       err => {
         console.log("Error occured: " + this.markovUrl + pathPhrase);

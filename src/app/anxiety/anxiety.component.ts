@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MetricsService } from '../services/metrics.service';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,16 +15,16 @@ const httpOptions = {
 export class AnxietyComponent implements OnInit {
 
   formData:Object;
+  hasCompleted:boolean;
   success:string;
   isSuccess:boolean;
   saveSurveyUrl = 'http://localhost:9000/surveys/anxiety/saveSurvey/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private metricsService: MetricsService) { }
 
   ngOnInit() {
     this.formData = {
       surveyName: 'anxiety',
-      studentName: '',
     };
   }
 
