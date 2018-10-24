@@ -11,8 +11,8 @@ import { Metrics } from './metrics';
 })
 export class MetricsComponent implements OnInit {
   metricsData : Metrics;
-  anxietyTotalsArray = [];
-  depressionTotalArray = [];
+  anxietyTotalsArray = new Array(30);
+  depressionTotalArray = new Array(30);
   flowTotalsArray = [];
   mindfulnessTotalsArray = [];
   constructor(private metricsService: MetricsService) {
@@ -22,27 +22,36 @@ export class MetricsComponent implements OnInit {
 
   ngOnInit() {
     this.metricsData = new Metrics();
+    let labels = [];
+    let i = 0;
+    let today = new Date();
+    console.log("this", this);
+    today.setDate(today.getDate() - 30);
+    for(i = 0; i < 30; i ++){
+      today.setDate(today.getDate() + 1);
+      labels.push((today.getMonth()+1) + " " + today.getDate() +" " + today.getFullYear());
+    }
     this.chart = new Chart('canvas', {
       type: 'line',
       data: {
-        labels: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        labels: labels,
         datasets: [{ 
-            data: [0,0,0,0,0,0,0,0,0,0,0,0],
+            data: new Array(30),
             label: "Anxiety",
             borderColor: "#3e95cd",
             fill: false
           }, { 
-            data: [0,0,0,0,0,0,0,0,0,0,0,0],
+            data: new Array(30),
             label: "Depression",
             borderColor: "#8e5ea2",
             fill: false
           }, { 
-            data: [0,0,0,0,0,0,0,0,0,0,0,0],
+            data: new Array(30),
             label: "Flow",
             borderColor: "#3cba9f",
             fill: false
           }, { 
-            data: [0,0,0,0,0,0,0,0,0,0,0,0],
+            data: new Array(30),
             label: "Mindfulness",
             borderColor: "#e8c3b9",
             fill: false
@@ -50,15 +59,18 @@ export class MetricsComponent implements OnInit {
         ]
       },
       options: {
+        layout: {
+          padding: {
+            top: 5
+          }
+        },
         title: {
           display: true,
-          text: 'Your Metrics Report'
+          text: 'Your 30 Day Metrics Report'
         }
       }
     });
-
     this.getMetrics();
-
   }
 
   getMetrics() : void {
@@ -81,32 +93,40 @@ export class MetricsComponent implements OnInit {
       }
     );
 
-    this.metricsService.getAnxietyMetrics().subscribe(
+    this.metricsService.getDepressionMetrics().subscribe(
       res => {
-        this.metricsData.anxiety = res;
-        Array.prototype.forEach.call(this.metricsData.anxiety, obj => {
-          this.anxietyTotalsArray.push(obj.total);
+        let today = new Date();
+        let diff = today.getDate()-29;
+        this.metricsData.depression = res;
+        Array.prototype.forEach.call(this.metricsData.depression, obj => {
+          let comp = new Date(obj.dateRecorded);
+          this.depressionTotalArray[comp.getDate()-diff] = obj.total;
         });
         let i;
-        for (i = 0; i < this.anxietyTotalsArray.length; i++) { 
-          this.chart.data.datasets[0].data[i] = this.anxietyTotalsArray[i];
-        }        this.chart.update();
+        for (i = 0; i < this.depressionTotalArray.length; i++) { 
+          this.chart.data.datasets[1].data[i] = this.depressionTotalArray[i];
+        }        
+        this.chart.update();
       },
       err => {
         console.log('error');
       }
     );
 
-    this.metricsService.getDepressionMetrics().subscribe(
+    this.metricsService.getAnxietyMetrics().subscribe(
       res => {
-        this.metricsData.depression = res;
-        Array.prototype.forEach.call(this.metricsData.depression, obj => {
-          this.depressionTotalArray.push(obj.total);
-        });
+        let today = new Date();
+        let diff = today.getDate()-29;
+        this.metricsData.anxiety = res;
+        Array.prototype.forEach.call(this.metricsData.anxiety, obj => {
+          let comp = new Date(obj.dateRecorded);
+          this.anxietyTotalsArray[comp.getDate()-diff] = obj.total;
+        });   
         let i;
-        for (i = 0; i < this.depressionTotalArray.length; i++) { 
-          this.chart.data.datasets[1].data[i] = this.depressionTotalArray[i];
-        }        this.chart.update();
+        for (i = 0; i < this.anxietyTotalsArray.length; i++) { 
+          this.chart.data.datasets[0].data[i] = this.anxietyTotalsArray[i];
+        }        
+        this.chart.update();
       },
       err => {
         console.log('error');
@@ -128,8 +148,6 @@ export class MetricsComponent implements OnInit {
         console.log('error');
       }
     );
-    console.log('this', this);
-
   }
 
 }
