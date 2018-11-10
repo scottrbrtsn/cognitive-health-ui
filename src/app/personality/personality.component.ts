@@ -14,17 +14,13 @@ export class PersonalityComponent implements OnInit {
 
   success:string;
   isSucces:boolean;
-  formData:Object;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/personality/saveSurvey/';
 
   constructor(private http: HttpClient) { 
   }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'personality',
-      studentName: '',
-    };
+    
   }
 
   saveSurvey = function() {

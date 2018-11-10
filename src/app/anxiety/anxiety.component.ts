@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MetricsService } from '../services/metrics.service';
+import {Anxiety } from './anxiety';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,6 +15,7 @@ const httpOptions = {
 })
 export class AnxietyComponent implements OnInit {
 
+  formData:Anxiety;
   hasCompleted:boolean;
   success:string;
   isSuccess:boolean;

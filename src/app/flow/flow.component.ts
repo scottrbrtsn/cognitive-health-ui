@@ -13,7 +13,6 @@ const httpOptions = {
 
 export class FlowComponent implements OnInit {
 
-  formData:Object;
   success:string;
   isSuccess:boolean;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/flow/saveSurvey/';
@@ -22,26 +21,7 @@ export class FlowComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'flow',
-      userName:'',
-      fss1:'',
-      fss2:'',
-      fss3:'',
-      fss4:'',
-      fss5:'',
-      fss6:'',
-      fss7:'',
-      fss8:'',
-      fss9:'',
-      fss10:'',
-      fss11:'',
-      fss12:'',
-      fss13:'',
-      fssA:'',
-      fssB:'',
-      fssC:''
-    };
+   
   }
 
   saveSurvey = function() {
