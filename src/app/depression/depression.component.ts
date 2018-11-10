@@ -12,7 +12,6 @@ const httpOptions = {
 })
 export class DepressionComponent implements OnInit {
 
-  formData:Object;
   success:string;
   isSuccess:boolean;
   
@@ -21,20 +20,7 @@ export class DepressionComponent implements OnInit {
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'depression',
-      userName: '',
-      phq1:'',
-      phq2:'',
-      phq3:'',
-      phq4:'',
-      phq5:'',
-      phq6:'',
-      phq7:'',
-      phq8:'',
-      phq9:'',
-      phq10:''
-    };
+
   }
 
   saveSurvey = function() {
