@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Flow } from './flow';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -13,6 +14,7 @@ const httpOptions = {
 
 export class FlowComponent implements OnInit {
 
+  formData:Object;
   success:string;
   isSuccess:boolean;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/flow/saveSurvey/';
@@ -21,7 +23,7 @@ export class FlowComponent implements OnInit {
   }
 
   ngOnInit() {
-   
+ 
   }
 
   saveSurvey = function() {
