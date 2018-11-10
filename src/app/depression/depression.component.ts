@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Depression } from './depression';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -12,6 +13,7 @@ const httpOptions = {
 })
 export class DepressionComponent implements OnInit {
 
+  formData:Depression;
   success:string;
   isSuccess:boolean;
   
@@ -20,7 +22,7 @@ export class DepressionComponent implements OnInit {
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
-
+    
   }
 
   saveSurvey = function() {

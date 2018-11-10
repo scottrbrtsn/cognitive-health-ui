@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MetricsService } from '../services/metrics.service';
-import {Anxiety } from './anxiety';
+import { Anxiety } from './anxiety';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
