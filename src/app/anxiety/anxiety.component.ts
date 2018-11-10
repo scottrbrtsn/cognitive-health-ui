@@ -23,7 +23,18 @@ export class AnxietyComponent implements OnInit {
   constructor(private http: HttpClient, private metricsService: MetricsService) { }
 
   ngOnInit() {
-    
+    this.formData = {
+      surveyName: 'anxiety',
+      userName: '',
+      gad1:'',
+      gad2:'',
+      gad3:'',
+      gad4:'',
+      gad5:'',
+      gad6:'',
+      gad7:'',
+      gad8:''
+    };
   }
 
   saveSurvey = function() {
