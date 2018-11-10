@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Personality } from './personality';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,13 +15,14 @@ export class PersonalityComponent implements OnInit {
 
   success:string;
   isSucces:boolean;
+  formData:Personality;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/personality/saveSurvey/';
 
   constructor(private http: HttpClient) { 
   }
 
   ngOnInit() {
-    
+  
   }
 
   saveSurvey = function() {
