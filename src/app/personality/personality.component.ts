@@ -15,7 +15,7 @@ export class PersonalityComponent implements OnInit {
   success:string;
   isSucces:boolean;
   formData:Object;
-  saveSurveyUrl = 'http://localhost:9000/surveys/personality/saveSurvey/';
+  saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/personality/saveSurvey/';
 
   constructor(private http: HttpClient) { 
   }

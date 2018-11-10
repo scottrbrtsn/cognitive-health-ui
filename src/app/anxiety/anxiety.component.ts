@@ -18,7 +18,7 @@ export class AnxietyComponent implements OnInit {
   hasCompleted:boolean;
   success:string;
   isSuccess:boolean;
-  saveSurveyUrl = 'http://localhost:9000/surveys/anxiety/saveSurvey/';
+  saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/anxiety/saveSurvey/';
 
   constructor(private http: HttpClient, private metricsService: MetricsService) { }
 

@@ -25,7 +25,7 @@ export class MetricsService {
                         depression: [],
                         flow: [],
                         mindfulness: []};
-    this.rootUrl = 'http://localhost:9000/surveys/';
+    this.rootUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/';
     this.getSurveysEndpoint = '/getSurveys';
     this.flowDataUrl = this.buildGetSurveysUrl('flow');
     this.mindfulnessDataUrl = this.buildGetSurveysUrl('mindfulness');

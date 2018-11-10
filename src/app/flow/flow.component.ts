@@ -16,7 +16,7 @@ export class FlowComponent implements OnInit {
   formData:Object;
   success:string;
   isSuccess:boolean;
-  saveSurveyUrl = 'http://localhost:9000/surveys/flow/saveSurvey/';
+  saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/flow/saveSurvey/';
 
   constructor(private http: HttpClient) { 
   }

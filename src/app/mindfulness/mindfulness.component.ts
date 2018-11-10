@@ -14,7 +14,7 @@ export class MindfulnessComponent implements OnInit {
   success:string;
   isSuccess:boolean;
   formData:Object;
-  saveSurveyUrl = 'http://localhost:9000/surveys/mindfulness/saveSurvey/';
+  saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/mindfulness/saveSurvey/';
 
   constructor(private http : HttpClient) { }
 

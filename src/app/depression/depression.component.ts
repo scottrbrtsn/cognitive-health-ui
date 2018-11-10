@@ -16,7 +16,7 @@ export class DepressionComponent implements OnInit {
   success:string;
   isSuccess:boolean;
   
-  saveSurveyUrl = 'http://localhost:9000/surveys/depression/saveSurvey/';
+  saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/depression/saveSurvey/';
 
   constructor(private http : HttpClient) { }
 
