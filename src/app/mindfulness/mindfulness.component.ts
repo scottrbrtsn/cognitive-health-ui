@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Mindfulness } from './mindfulness';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -13,15 +14,13 @@ const httpOptions = {
 export class MindfulnessComponent implements OnInit {
   success:string;
   isSuccess:boolean;
-  formData:Object;
+  formData:Mindfulness;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/mindfulness/saveSurvey/';
 
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'mindfulness',
-    };
+    
   }
 
   saveSurvey = function() {

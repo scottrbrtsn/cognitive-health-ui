@@ -14,7 +14,7 @@ const httpOptions = {
 
 export class FlowComponent implements OnInit {
 
-  formData:Object;
+  formData:Flow;
   success:string;
   isSuccess:boolean;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/flow/saveSurvey/';
