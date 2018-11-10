@@ -38,6 +38,7 @@ export class ChatComponent implements OnInit {
   name: string;
   latlon: string;
   userData: object;
+  response: string;
 
   startMarkov = function(){
     this.markovString = this.markovInput;
