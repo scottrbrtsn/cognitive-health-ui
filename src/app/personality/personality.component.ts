@@ -14,7 +14,7 @@ const httpOptions = {
 export class PersonalityComponent implements OnInit {
 
   success:string;
-  isSucces:boolean;
+  isSuccess:boolean;
   formData:Personality;
   saveSurveyUrl = 'https://cognitive-health-toolshed.herokuapp.com/surveys/personality/saveSurvey/';
 
