@@ -22,9 +22,7 @@ export class FlowComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'flow',
-    };
+    
   }
 
   saveSurvey = function() {

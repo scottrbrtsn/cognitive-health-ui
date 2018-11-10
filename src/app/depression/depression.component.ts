@@ -21,9 +21,7 @@ export class DepressionComponent implements OnInit {
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
-    this.formData = {
-      surveyName: 'depression',
-    };
+    
   }
 
   saveSurvey = function() {
