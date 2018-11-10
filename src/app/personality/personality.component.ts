@@ -22,7 +22,8 @@ export class PersonalityComponent implements OnInit {
   }
 
   ngOnInit() {
-  
+    this.formData = new Personality();
+
   }
 
   saveSurvey = function() {

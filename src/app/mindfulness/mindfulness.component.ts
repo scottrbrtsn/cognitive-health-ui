@@ -20,7 +20,8 @@ export class MindfulnessComponent implements OnInit {
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
-    
+    this.formData = new Mindfulness();
+
   }
 
   saveSurvey = function() {
