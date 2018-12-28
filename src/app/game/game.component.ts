@@ -88,7 +88,7 @@ export class GameComponent implements OnInit {
 
   forwardHall = function(){
     this.currentHall = (this.currentHall + 1) %9 ;
-    this.currentHallSrc = "/assets/world-images/StraightHall/" + this.currentHall + ".jpg";
+    this.currentHallSrc = "./assets/world-images/StraightHall/" + this.currentHall + ".jpg";
   }
 
   forward = function(){
