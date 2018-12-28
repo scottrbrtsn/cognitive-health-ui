@@ -11,7 +11,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.currentHall = 0;
-    this.currentHallSrc = "/assets/world-images/StraightHall/" + this.currentHall + ".jpg";
+    this.currentHallSrc = "./assets/world-images/StraightHall/" + this.currentHall + ".jpg";
 
     const view1N = document.getElementById("box1N");
     const view1S = document.getElementById("box1S");
