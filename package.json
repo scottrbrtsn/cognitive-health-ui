@@ -5,6 +5,7 @@
     "npm": "6.1.0"
   },
   "version": "0.0.0",
+  "homepage": "https://scottrbrtsn.github.io/cognitive-health-ui",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -12,7 +13,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --prod",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "core-js": "^2.5.4",
     "document-register-element": "^1.7.2",
     "express": "^4.16.4",
+    "gh-pages": "^2.0.1",
     "hoek": "^4.2.1",
     "path": "^0.12.7",
     "rxjs": "^6.0.0",
