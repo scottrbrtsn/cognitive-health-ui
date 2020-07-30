@@ -18,6 +18,7 @@ import { WillingComponent } from './willing/willing.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GameComponent } from './game/game.component';
 import { ChatComponent } from './chat/chat.component';
+import { BokehComponent } from './bokeh/bokeh.component';
 import { JungianWorldComponent } from './jungian-world/jungian-world.component';
 import { MetricsComponent } from './metrics/metrics.component';
 import { MetricsService } from './services/metrics.service';
@@ -37,6 +38,7 @@ import { MetricsService } from './services/metrics.service';
     WillingComponent,
     GameComponent,
     ChatComponent,
+    BokehComponent,
     JungianWorldComponent,
     MetricsComponent
   ],

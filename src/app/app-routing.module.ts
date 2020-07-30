@@ -12,6 +12,8 @@ import { WillingComponent } from './willing/willing.component';
 import { ChatComponent } from './chat/chat.component';
 import { GameComponent } from './game/game.component';
 import { MetricsComponent } from './metrics/metrics.component';
+import { BokehComponent } from './bokeh/bokeh.component';
+
 
 
 const routes: Routes = [
@@ -26,7 +28,8 @@ const routes: Routes = [
   { path: 'willing', component: WillingComponent },
   { path: 'chatbot', component: ChatComponent },
   { path: 'game', component: GameComponent },
-  { path: 'metrics', component: MetricsComponent }
+  { path: 'metrics', component: MetricsComponent },
+  { path: 'bokeh', component: BokehComponent }
 
 ];
 
